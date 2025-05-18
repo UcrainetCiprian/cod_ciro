@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.presentation.HelloController">
+  <tabs>
+    <Tab text="Client">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="233.0" layoutY="15.0" prefHeight="31.0" prefWidth="226.0" text="CLIENT MANAGEMENT">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="63.0" layoutY="61.0" text="ID:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="88.0" text="NAME:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="21.0" layoutY="118.0" text="PHONE:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="clientIdField" layoutX="97.0" layoutY="62.0" />
+                  <TextField fx:id="clientNameField" layoutX="97.0" layoutY="89.0" />
+                  <TextField fx:id="clientPhoneField" layoutX="97.0" layoutY="119.0" />
+                  <Button fx:id="addButton" layoutX="284.0" layoutY="62.0" mnemonicParsing="false" onAction="#addButtonActionClient" prefHeight="33.0" prefWidth="124.0" text="ADD" />
+                  <Button fx:id="deleteButton" layoutX="284.0" layoutY="103.0" mnemonicParsing="false" onAction="#deleteButtonActionClient" prefHeight="33.0" prefWidth="124.0" text="DELETE" />
+                  <Button fx:id="updateButton" layoutX="425.0" layoutY="62.0" mnemonicParsing="false" onAction="#updateButtonActionClient" prefHeight="33.0" prefWidth="124.0" text="UPDATE" />
+                  <Button fx:id="viewAllButton" layoutX="425.0" layoutY="103.0" mnemonicParsing="false" onAction="#viewAllButton" prefHeight="33.0" prefWidth="124.0" text="VIEW ALL" />
+                  <Button fx:id="viewByIdButton" layoutX="562.0" layoutY="62.0" mnemonicParsing="false" onAction="#findByIdClient" prefHeight="76.0" prefWidth="124.0" text="FIND BY ID" />
+                  <TableView fx:id="clientTable" layoutX="-1.0" layoutY="159.0" prefHeight="513.0" prefWidth="706.0">
+                    <columns>
+                      <TableColumn fx:id="idColumn" prefWidth="233.0" text="idClient" />
+                      <TableColumn fx:id="nameColumn" prefWidth="233.0" text="nume" />
+                        <TableColumn fx:id="phoneColumn" prefWidth="233.0" text="nrTel" />
+                    </columns>
+                  </TableView>
+                  <Line endX="126.5" layoutX="97.0" layoutY="30.0" startX="-100.0" />
+                  <Line endX="160.0" layoutX="540.0" layoutY="29.0" startX="-81.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Product">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="222.0" layoutY="14.0" prefHeight="31.0" prefWidth="257.0" text="PRODUCT MANAGEMENT">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Line endX="135.0" layoutX="565.0" layoutY="29.0" startX="-86.0" startY="0.5" />
+                  <Line endX="109.5" layoutX="101.0" layoutY="29.0" startX="-100.0" />
+                  <Label layoutX="58.0" layoutY="45.0" text="ID:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="23.0" layoutY="125.0" text="STOCK:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="31.0" layoutY="71.0" text="NAME:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="33.0" layoutY="98.0" text="PRICE:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="productIdField" layoutX="88.0" layoutY="46.0" />
+                  <TextField fx:id="productNameField" layoutX="88.0" layoutY="72.0" />
+                  <TextField fx:id="stockField" layoutX="88.0" layoutY="126.0" />
+                  <TextField fx:id="priceField" layoutX="88.0" layoutY="99.0" />
+                  <Button fx:id="addButtonProduct" layoutX="266.0" layoutY="68.0" mnemonicParsing="false" onAction="#addButtonActionProduct" prefHeight="33.0" prefWidth="124.0" text="ADD" />
+                  <Button fx:id="deleteButtonProduct" layoutX="266.0" layoutY="108.0" mnemonicParsing="false" onAction="#deleteButtonActionProduct" prefHeight="33.0" prefWidth="124.0" text="DELETE" />
+                  <Button fx:id="updateButtonProduct" layoutX="396.0" layoutY="68.0" mnemonicParsing="false" onAction="#updateButtonActionProduct" prefHeight="33.0" prefWidth="124.0" text="UPDATE" />
+                  <Button fx:id="viewAllButtonProduct" layoutX="396.0" layoutY="108.0" mnemonicParsing="false" onAction="#viewAllProducts" prefHeight="33.0" prefWidth="124.0" text="VIEW  ALL" />
+                  <Button fx:id="viewByIdButtonProduct" layoutX="530.0" layoutY="66.0" mnemonicParsing="false" onAction="#findByIdProduct" prefHeight="76.0" prefWidth="141.0" text="FIND BY ID" />
+                  <TableView fx:id="productTable" layoutX="-3.0" layoutY="167.0" prefHeight="504.0" prefWidth="700.0">
+                     <columns>
+                        <TableColumn fx:id="idColumnProduct" prefWidth="175.0" text="idProduct" />
+                        <TableColumn fx:id="nameColumnProduct" prefWidth="175.0" text="nume" />
+                        <TableColumn fx:id="priceColumn" prefWidth="175.0" text="pret" />
+                        <TableColumn fx:id="stockColumn" prefWidth="175.0" text="stock" />
+                     </columns>
+                  </TableView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Order">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="239.0" layoutY="14.0" prefHeight="31.0" prefWidth="222.0" text="ORDER MANAGEMENT">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Line endX="126.5" layoutX="92.0" layoutY="29.0" startX="-100.0" />
+                  <Line endX="138.0" layoutX="562.0" layoutY="29.0" startX="-100.0" />
+                  <Label layoutX="54.0" layoutY="57.0" text="Select a product:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="productComboBox" layoutX="196.0" layoutY="58.0" prefWidth="150.0" />
+                  <Label layoutX="74.0" layoutY="100.0" text="Select a client:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="clientComboBox" layoutX="197.0" layoutY="101.0" prefWidth="150.0" />
+                  <Label layoutX="114.0" layoutY="142.0" text="Quantity:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="productQuantityField" layoutX="198.0" layoutY="143.0" />
+                  <Button fx:id="placeOrderButton" layoutX="424.0" layoutY="55.0" mnemonicParsing="false" onAction="#placeOrderButton" prefHeight="54.0" prefWidth="178.0" text="Place order" />
+                  <Line endX="530.5" layoutX="135.0" layoutY="188.0" startX="-100.0" />
+                  <TableView fx:id="logTable" layoutX="-3.0" layoutY="206.0" prefHeight="466.0" prefWidth="700.0">
+                     <columns>
+                        <TableColumn fx:id="idColumnLog" prefWidth="175.0" text="idLog" />
+                        <TableColumn fx:id="idColumnOrder" prefWidth="175.0" text="orderId" />
+                        <TableColumn fx:id="clientNameColumn" prefWidth="175.0" text="clientName" />
+                        <TableColumn fx:id="productMameColumn" prefWidth="175.0" text="productName" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="viewLogButton" layoutX="424.0" layoutY="114.0" mnemonicParsing="false" onAction="#viewAllLogs" prefHeight="55.0" prefWidth="179.0" text="View logs" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

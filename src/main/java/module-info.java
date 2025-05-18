@@ -1,0 +1,12 @@
+module com.example.presentation {
+    requires javafx.controls;
+    requires javafx.fxml;
+    requires java.sql;
+    requires java.desktop;
+
+
+    opens com.example.presentation to javafx.fxml;
+    opens Model to javafx.base;
+
+    exports com.example.presentation;
+}
