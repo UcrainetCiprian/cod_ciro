@@ -21,6 +21,42 @@ public class Log {
         this.clientName = clientName;
         this.productName = productName;
     }
+
+    public Log(){
+
+    }
+
+    public int getIdLog() {
+        return idLog;
+    }
+
+    public void setIdLog(int idLog) {
+        this.idLog = idLog;
+    }
+
+    public int getOrderID() {
+        return orderID;
+    }
+
+    public void setOrderID(int orderID) {
+        this.orderID = orderID;
+    }
+
+    public String getClientName() {
+        return clientName;
+    }
+
+    public void setClientName(String clientName) {
+        this.clientName = clientName;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
     @Override
     public String toString() {
         return "Log{" +

@@ -18,4 +18,8 @@ public class LogBLL {
     public List<Log> getAllLogs() {
         return logDAO.findAll();
     }
+
+    public void deleteLogsByOrderId(int idOrder) {
+        logDAO.deleteByOrderId(idOrder);
+    }
 }

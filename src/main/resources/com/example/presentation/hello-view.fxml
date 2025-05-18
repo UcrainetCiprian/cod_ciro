@@ -47,11 +47,11 @@
                   <Button fx:id="viewAllButton" layoutX="425.0" layoutY="103.0" mnemonicParsing="false" onAction="#viewAllButton" prefHeight="33.0" prefWidth="124.0" text="VIEW ALL" />
                   <Button fx:id="viewByIdButton" layoutX="562.0" layoutY="62.0" mnemonicParsing="false" onAction="#findByIdClient" prefHeight="76.0" prefWidth="124.0" text="FIND BY ID" />
                   <TableView fx:id="clientTable" layoutX="-1.0" layoutY="159.0" prefHeight="513.0" prefWidth="706.0">
-                    <columns>
-                      <TableColumn fx:id="idColumn" prefWidth="233.0" text="idClient" />
-                      <TableColumn fx:id="nameColumn" prefWidth="233.0" text="nume" />
-                        <TableColumn fx:id="phoneColumn" prefWidth="233.0" text="nrTel" />
-                    </columns>
+
+                      <TableColumn prefWidth="233.0" text="idClient" />
+                      <TableColumn prefWidth="233.0" text="nume" />
+                        <TableColumn prefWidth="233.0" text="nrTel" />
+
                   </TableView>
                   <Line endX="126.5" layoutX="97.0" layoutY="30.0" startX="-100.0" />
                   <Line endX="160.0" layoutX="540.0" layoutY="29.0" startX="-81.0" />

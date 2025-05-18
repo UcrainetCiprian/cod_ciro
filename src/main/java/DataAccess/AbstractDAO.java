@@ -253,4 +253,14 @@ public class AbstractDAO<T> {
         }
     }
 
+    public void deleteByOrderId(int idOrder) {
+        String query = "DELETE FROM log WHERE orderID = ?";
+        try (Connection connection = ConnectionFactory.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setInt(1, idOrder);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

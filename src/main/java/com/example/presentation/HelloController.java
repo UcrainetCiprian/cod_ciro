@@ -13,7 +13,9 @@ import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Controllerul principal pentru interfata grafica.
@@ -191,8 +193,8 @@ public class HelloController {
     @FXML
     private void viewAllClients() {
         List<Client> clients = clientBLL.getAllClients().stream()
-                .sorted((c1, c2) -> c1.getNume().compareToIgnoreCase(c2.getNume()))
-                .toList();
+                .sorted(Comparator.comparing(Client::getNume))
+                .collect(Collectors.toList());
         ReflectionUtils.loadTable(clientTable, clients, Client.class);
 
     }
@@ -232,6 +234,7 @@ public class HelloController {
                 notFound.showAndWait();
             }
         }catch (Exception e) {
+            e.printStackTrace();
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Eroare la cautare client");
             alert.setHeaderText(null);

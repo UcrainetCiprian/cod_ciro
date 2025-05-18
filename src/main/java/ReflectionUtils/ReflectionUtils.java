@@ -20,8 +20,10 @@ public class ReflectionUtils {
      * @param <T> tipul generic
      */
     public static <T> void loadTable(TableView<T> table, List<T> data, Class<T> type) {
-        int columnCount = table.getColumns().size();
         table.getColumns().clear();
+        Field[] fields = type.getDeclaredFields();
+        int columnCount = fields.length;
+
 
         for (Field field : type.getDeclaredFields()) {
             field.setAccessible(true);

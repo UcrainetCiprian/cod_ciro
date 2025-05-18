@@ -2,11 +2,16 @@ package BusinessLogic;
 
 import DataAccess.ClientDAO;
 import Model.Client;
+import Model.Order_Table;
+import BusinessLogic.OrderBLL;
 
 import java.util.List;
 
 public class ClientBLL {
     private final ClientDAO clientDAO = new ClientDAO();
+    private final OrderBLL orderBLL = new OrderBLL();
+    private final LogBLL logBLL = new LogBLL();
+
 
     /**
      * Insereaza un client nou în baza de date
@@ -27,8 +32,17 @@ public class ClientBLL {
     public void updateClient(Client client) {
         clientDAO.update(client);
     }
-    public void deleteClient(int idClient) {
-        clientDAO.delete(idClient);
+    public void deleteClient(int id) {
+        List<Order_Table> orders = orderBLL.getAllOrders().stream()
+                .filter(o -> o.getClientID() == id)
+                .toList();
+
+        for (Order_Table order : orders) {
+            logBLL.deleteLogsByOrderId(order.getIdOrder());
+            orderBLL.delete(order.getIdOrder());
+        }
+
+        clientDAO.delete(id);
     }
     public Client getClient(int id) {
         return clientDAO.findById(id);

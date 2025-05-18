@@ -46,6 +46,18 @@ public class Product {
         this.stock = stock;
     }
 
+    public void setIdProduct(int idProduct) {
+        this.idProduct = idProduct;
+    }
+
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
+    public void setPret(double pret) {
+        this.pret = pret;
+    }
+
     @Override
     public String toString() {
         return "Product{" +

@@ -22,6 +22,9 @@ public class OrderBLL {
         int generatedId = orderDAO.insert(o);
         o.setIdOrder(generatedId);
     }
+    public void delete(int idOrder) {
+        orderDAO.delete(idOrder);
+    }
     public Order_Table getOrder(int id) {
         return orderDAO.findById(id);
     }

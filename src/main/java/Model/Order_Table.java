@@ -22,6 +22,10 @@ public class Order_Table {
         this.cantitate = cantitate;
     }
 
+    public Order_Table() {
+
+    }
+
     public int getIdOrder() {
         return idOrder;
     }
@@ -34,6 +38,22 @@ public class Order_Table {
         this.idOrder = idOrder;
     }
 
+    public void setCantitate(int cantitate) {
+        this.cantitate = cantitate;
+    }
+
+    public int getIdClient() {
+        return clientID;
+    }
+    public int getProductID() {
+        return productID;
+    }
+    public void setProductID(int productID) {
+        this.productID = productID;
+    }
+    public void setClientID(int idClient) {
+        this.clientID = idClient;
+    }
     @Override
     public String toString() {
         return "Order{" +
@@ -45,4 +65,7 @@ public class Order_Table {
     }
 
 
+    public int getClientID() {
+        return clientID;
+    }
 }

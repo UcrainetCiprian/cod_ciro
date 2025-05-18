@@ -34,6 +34,17 @@ public class Client {
         return nrTel;
     }
 
+    public void setIdClient(int idClient) {
+        this.idClient = idClient;
+    }
+
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+    public void setNrTel(String nrTel) {
+        this.nrTel = nrTel;
+    }
+
     @Override
     public String toString() {
         return "Client{" +
